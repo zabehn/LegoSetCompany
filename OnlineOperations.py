@@ -1,12 +1,15 @@
 class OnlineOperations(object):
     """all online customer operations"""
-    
-    def login():
+    def _init_(self):
+        self.order = Order()
+        self.customer = Customer()
+
+    def login(self):
         newAccount = input("Do you have an account? (Y/N)")
         if newAccount[0].lower() == 'n':
-            temp_customer = create_account()
+            self.customer = create_account()
         else:
-            temp_customer = search_for_username()
+            self.customer = search_for_username()
         password = input("what is your password?: ")
         while not temp_customer.check_password(password):
             password = input("what is your password?: ")
@@ -70,7 +73,7 @@ class OnlineOperations(object):
             print("Legos with: " + product_id + " in description")
             #query database based on product_id
 
-    def buy_bricks():
+    def buy_bricks(self):
         while option == None or not (option == "s" or option == "p"):
             option = input("buy bricks by set (s) or product (p) ID?")
             option.lower()
@@ -87,4 +90,23 @@ class OnlineOperations(object):
             option.lower()
         if(option == "y"):
             print("added to order")
-            #add products to order
+            #for items in query add to the order
+            self.order.add_to_order(1,1)
+    
+    def edit_profile(self):
+        print(self.customer)
+        option = ""
+        while not option == "x":
+            option = input("what would you like to change?\ntype (x) to exit")
+            if option == "n":
+                self.customer.name = input("what is the new name?: ")
+            elif option == "p":
+                self.customer.password = input("what is the new password?: ")
+            elif option == "u":
+                username = input("what is the new username?: ")
+                while not username_exists(username):
+                    username = input("username is in use\nwhat is the new username?: ")
+            elif option == "a":
+                self.customer.address = getget_address()
+            else:
+                print("invalid option, try again")

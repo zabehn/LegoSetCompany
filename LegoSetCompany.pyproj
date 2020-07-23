@@ -37,6 +37,9 @@
     <Compile Include="OnlineOperations.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Order.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Reports.py">
       <SubType>Code</SubType>
     </Compile>
