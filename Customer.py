@@ -11,4 +11,4 @@ class Customer(object):
         return(self.password == passwordAttempt)
 
     def _str_(self):
-        print("(n)ame: "+self.name+"\n(u)sername: "+self.username++"\n(p)assword: "+self.password+"\n(a)ddress: "+self.address)
+        return ('(n)ame: '+self.name+'\n(u)sername: '+self.username+'\n(p)assword: '+self.password+'\n(a)ddress: '+self.address)

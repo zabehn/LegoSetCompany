@@ -9,3 +9,8 @@ class Order(object):
         self.product_ids.append(product_id)
         self.product_quantities.append(quantity)
 
+    def _str_(self):
+        for x,y in zip(self.product_ids,self.product_quantities):
+            print(x+"|"+y)
+
+
