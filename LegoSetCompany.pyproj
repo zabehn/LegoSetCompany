@@ -27,10 +27,7 @@
     <Compile Include="Database.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Employee.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="InStoreOperations.py">
+    <Compile Include="Store.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="LegoSetCompany.py" />

@@ -1,5 +1,6 @@
 #main class for menu processing
 import OnlineOperations
+from Store import Store
 online = OnlineOperations.OnlineOperations()
 
 def print_main_menu():
@@ -29,7 +30,8 @@ def print_online_menu():
         
 
 def print_in_store_menu():
-    print("In Store Menu")
+    run = Store()
+    run.inStoreMenu()
 
 option = 't'
 while not option.lower() == 'x':
